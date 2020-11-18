@@ -22,8 +22,8 @@ public class Areas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_areas);
 
-        lista_opciones_areas = findViewById(R.id.lstOpciones);
-        opciones_areas = getResources().getStringArray(R.array.opciones);
+        lista_opciones_areas = findViewById(R.id.lstAreas);
+        opciones_areas = getResources().getStringArray(R.array.areas);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, opciones_areas);
         lista_opciones_areas.setAdapter(adapter);
 

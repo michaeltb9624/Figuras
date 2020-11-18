@@ -11,7 +11,18 @@
     <string name="area_rectangulo">Rectangulo</string>
     <string name="area_triangulo">Triángulo</string>
     <string name="area_circulo">Circulo</string>
-
+    <string name="volumen_esfera">Esfera</string>
+    <string name="volumen_cilindro">Cilindro</string>
+    <string name="volumen_cono">Cono</string>
+    <string name="volumen_cubo">Cubo</string>
+    <string name="valor_lado">Valor del Lado</string>
+    <string name="calcular">Calcular</string>
+    <string name="borrar">Borrar</string>
+    <string name="resultado">Resultado</string>
+    <string name="ok">OK</string>
+    <string name="numero">No.</string>
+    <string name="operacion">Operación</string>
+    <string name="datos">Datos</string>
 
     <string-array name="opciones">
         <item>@string/opciones_area</item>
@@ -24,6 +35,13 @@
         <item>@string/area_rectangulo</item>
         <item>@string/area_triangulo</item>
         <item>@string/area_circulo</item>
+    </string-array>
+
+    <string-array name="volumenes">
+        <item>@string/volumen_esfera</item>
+        <item>@string/volumen_cilindro</item>
+        <item>@string/volumen_cono</item>
+        <item>@string/volumen_cubo</item>
     </string-array>
 
 
