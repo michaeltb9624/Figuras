@@ -1,4 +1,30 @@
 <resources>
     <string name="app_name">Figuras</string>
     <string name="titulo_opciones">Opciones</string>
+    <string name="opciones_area">Areas</string>
+    <string name="opciones_volumenes">Volúmenes</string>
+    <string name="opciones_operaciones_realizadas">Operaciones Realizadas</string>
+    <string name="titulo_ope_realizadas">Realizadas</string>
+    <string name="titulo_volumenes">Volúmenes</string>
+    <string name="titulo_areas">Áreas</string>
+    <string name="area_cuadradro">Cuadrado</string>
+    <string name="area_rectangulo">Rectangulo</string>
+    <string name="area_triangulo">Triángulo</string>
+    <string name="area_circulo">Circulo</string>
+
+
+    <string-array name="opciones">
+        <item>@string/opciones_area</item>
+        <item>@string/opciones_volumenes</item>
+        <item>@string/opciones_operaciones_realizadas</item>
+    </string-array>
+
+    <string-array name="areas">
+        <item>@string/area_cuadradro</item>
+        <item>@string/area_rectangulo</item>
+        <item>@string/area_triangulo</item>
+        <item>@string/area_circulo</item>
+    </string-array>
+
+
 </resources>
