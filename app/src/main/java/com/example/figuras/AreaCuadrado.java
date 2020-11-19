@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 public class AreaCuadrado extends AppCompatActivity {
 
-    Button btnCalcular;
     EditText ladoCuadrado;
     private Intent intent;
 
@@ -21,19 +20,25 @@ public class AreaCuadrado extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_area_cuadrado);
 
-        btnCalcular = findViewById(R.id.btnCalcAreaCuadrado);
         ladoCuadrado = findViewById(R.id.editTextValorLado);
     }
 
 
-    public void CalcularAreaCuadrado (View v){
+    public void calcularAreaCuadrado (View v){
         Double lado = Double.parseDouble(ladoCuadrado.getText().toString());
         Double resultado= lado*lado;
+        Operacion ope = new Operacion(getString(R.string.area_del_cuadrado), getString(R.string.lado)+" : " + lado ,""+resultado);
+        ope.guardar();
         intent = new Intent(AreaCuadrado.this, Resultado.class);
-        intent.putExtra("titulo", "Cuadrado") ;
-        intent.putExtra("tipoCalculo", "Area") ;
+        intent.putExtra("titulo", getString(R.string.cuadrado)) ;
+        intent.putExtra("tipoCalculo", getString(R.string.areas)) ;
         intent.putExtra("medida", "m2") ;
         intent.putExtra("resultado", ""+resultado.toString());
         startActivity(intent);
+    }
+
+    public void limpiar (View v){
+        ladoCuadrado.setText("");
+        ladoCuadrado.requestFocus();
     }
 }

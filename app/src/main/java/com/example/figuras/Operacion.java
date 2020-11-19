@@ -34,4 +34,8 @@ public class Operacion {
     public void setResultado(String resultado) {
         this.resultado = resultado;
     }
+
+    public void guardar(){
+        Datos.guardar(this);
+    }
 }

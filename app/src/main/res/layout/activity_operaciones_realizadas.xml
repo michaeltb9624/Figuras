@@ -17,6 +17,7 @@
         android:textStyle="bold" />
 
     <TableLayout
+        android:id="@+id/tblOperacionesRealizadas"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10sp"
@@ -25,6 +26,7 @@
         android:stretchColumns="*">
 
         <TableRow
+            android:id="@+id/tblEnunciados"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

@@ -11,7 +11,7 @@
         android:id="@+id/txtTitAreaCuadrado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/area_cuadradro"
+        android:text="@string/cuadrado"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -47,7 +47,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:onClick="CalcularAreaCuadrado"
+            android:onClick="calcularAreaCuadrado"
             android:text="@string/calcular" />
 
         <Button
@@ -55,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="limpiar"
             android:text="@string/borrar" />
     </LinearLayout>
 

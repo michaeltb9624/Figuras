@@ -7,14 +7,10 @@
     <string name="titulo_ope_realizadas">Realizadas</string>
     <string name="titulo_volumenes">Volúmenes</string>
     <string name="titulo_areas">Áreas</string>
-    <string name="area_cuadradro">Cuadrado</string>
-    <string name="area_rectangulo">Rectangulo</string>
-    <string name="area_triangulo">Triángulo</string>
-    <string name="area_circulo">Circulo</string>
-    <string name="volumen_esfera">Esfera</string>
-    <string name="volumen_cilindro">Cilindro</string>
-    <string name="volumen_cono">Cono</string>
-    <string name="volumen_cubo">Cubo</string>
+    <string name="cilindro">Cilindro</string>
+    <string name="esfera">Esfera</string>
+    <string name="cono">Cono</string>
+    <string name="cubo">Cubo</string>
     <string name="valor_lado">Valor del Lado</string>
     <string name="calcular">Calcular</string>
     <string name="borrar">Borrar</string>
@@ -23,6 +19,21 @@
     <string name="numero">No.</string>
     <string name="operacion">Operación</string>
     <string name="datos">Datos</string>
+    <string name="area_del_cuadrado">Area del Cuadrado</string>
+    <string name="lado">Lado</string>
+    <string name="base">Base</string>
+    <string name="altura">Altura</string>
+    <string name="rectangulo">Rectangulo</string>
+    <string name="cuadrado">Cuadrado</string>
+    <string name="triangulo">Triángulo</string>
+    <string name="areas">Area</string>
+    <string name="area_del_rectangulo">Area del Rectangulo</string>
+    <string name="area_del_triangulo">Area del Triángulo</string>
+    <string name="radio">Radio</string>
+    <string name="area_del_circulo">Area del Círculo</string>
+    <string name="circulo">Círculo</string>
+    <string name="volumen_de_esfera">Volúmen de la Esfera</string>
+    <string name="volumenes">Volumen</string>
 
     <string-array name="opciones">
         <item>@string/opciones_area</item>
@@ -31,17 +42,17 @@
     </string-array>
 
     <string-array name="areas">
-        <item>@string/area_cuadradro</item>
-        <item>@string/area_rectangulo</item>
-        <item>@string/area_triangulo</item>
-        <item>@string/area_circulo</item>
+        <item>@string/cuadrado</item>
+        <item>@string/rectangulo</item>
+        <item>@string/triangulo</item>
+        <item>@string/circulo</item>
     </string-array>
 
     <string-array name="volumenes">
-        <item>@string/volumen_esfera</item>
-        <item>@string/volumen_cilindro</item>
-        <item>@string/volumen_cono</item>
-        <item>@string/volumen_cubo</item>
+        <item>@string/esfera</item>
+        <item>@string/cilindro</item>
+        <item>@string/cono</item>
+        <item>@string/cubo</item>
     </string-array>
 
 
