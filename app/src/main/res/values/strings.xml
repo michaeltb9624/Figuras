@@ -37,6 +37,10 @@
     <string name="volumen_de_cilindro">Volúmen de Cilindro</string>
     <string name="volumen_de_cono">Volumen del Cono</string>
     <string name="volumen_de_cubo">Volúmen del Cubo</string>
+    <string name="ingrese_radio">Ingrese radio</string>
+    <string name="ingrese_lado">Ingrese lado</string>
+    <string name="ingrese_altura">Ingrese altura</string>
+    <string name="ingrese_base">Ingrese base</string>
 
     <string-array name="opciones">
         <item>@string/opciones_area</item>

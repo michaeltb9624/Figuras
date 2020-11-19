@@ -21,23 +21,39 @@ public class AreaTriangulo extends AppCompatActivity {
     }
 
     public void calcularAreaTriangulo (View v){
-
+    if(validar()) {
         Double base = Double.parseDouble(baseTriangulo.getText().toString());
         Double altura = Double.parseDouble(alturaTriangulo.getText().toString());
-        Double resultado= (base*altura)/2;
-        Operacion ope = new Operacion(getString(R.string.area_del_triangulo), getString(R.string.base)+" : " + base +"\n"+ getString(R.string.altura)+" : " + altura ,""+resultado);
+        Double resultado = (base * altura) / 2;
+        Operacion ope = new Operacion(getString(R.string.area_del_triangulo), getString(R.string.base) + " : " + base + "\n" + getString(R.string.altura) + " : " + altura, "" + resultado);
         ope.guardar();
         intent = new Intent(AreaTriangulo.this, Resultado.class);
-        intent.putExtra("titulo", getString(R.string.triangulo)) ;
-        intent.putExtra("tipoCalculo", getString(R.string.areas)) ;
-        intent.putExtra("medida", "m2") ;
-        intent.putExtra("resultado", ""+resultado.toString());
+        intent.putExtra("titulo", getString(R.string.triangulo));
+        intent.putExtra("tipoCalculo", getString(R.string.areas));
+        intent.putExtra("medida", "m2");
+        intent.putExtra("resultado", "" + resultado.toString());
         startActivity(intent);
+    }
     }
 
     public void limpiar (View v){
         baseTriangulo.setText("");
         alturaTriangulo.setText("");
         baseTriangulo.requestFocus();
+    }
+
+    public boolean validar(){
+        if (baseTriangulo.getText().toString().isEmpty()) {
+            baseTriangulo.setError(getString(R.string.ingrese_base));
+            baseTriangulo.requestFocus();
+            return false;
+        }
+
+        if (alturaTriangulo.getText().toString().isEmpty()) {
+            alturaTriangulo.setError(getString(R.string.ingrese_altura));
+            alturaTriangulo.requestFocus();
+            return false;
+        }
+        return true;
     }
 }

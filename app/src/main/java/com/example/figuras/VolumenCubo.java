@@ -22,20 +22,31 @@ public class VolumenCubo extends AppCompatActivity {
 
 
     public void calcularVolumenCubo (View v){
-        Double lado = Double.parseDouble(ladoCubo.getText().toString());
-        Double resultado= lado*lado*lado;
-        Operacion ope = new Operacion(getString(R.string.volumen_de_cubo), getString(R.string.lado)+" : " + lado ,""+resultado);
-        ope.guardar();
-        intent = new Intent(VolumenCubo.this, Resultado.class);
-        intent.putExtra("titulo", getString(R.string.cubo)) ;
-        intent.putExtra("tipoCalculo", getString(R.string.areas)) ;
-        intent.putExtra("medida", "m3") ;
-        intent.putExtra("resultado", ""+resultado.toString());
-        startActivity(intent);
+        if(validar()) {
+            Double lado = Double.parseDouble(ladoCubo.getText().toString());
+            Double resultado = lado * lado * lado;
+            Operacion ope = new Operacion(getString(R.string.volumen_de_cubo), getString(R.string.lado) + " : " + lado, "" + resultado);
+            ope.guardar();
+            intent = new Intent(VolumenCubo.this, Resultado.class);
+            intent.putExtra("titulo", getString(R.string.cubo));
+            intent.putExtra("tipoCalculo", getString(R.string.areas));
+            intent.putExtra("medida", "m3");
+            intent.putExtra("resultado", "" + resultado.toString());
+            startActivity(intent);
+        }
     }
 
     public void limpiar (View v){
         ladoCubo.setText("");
         ladoCubo.requestFocus();
+    }
+
+    public boolean validar(){
+        if (ladoCubo.getText().toString().isEmpty()) {
+            ladoCubo.setError(getString(R.string.ingrese_lado));
+            ladoCubo.requestFocus();
+            return false;
+        }
+        return true;
     }
 }

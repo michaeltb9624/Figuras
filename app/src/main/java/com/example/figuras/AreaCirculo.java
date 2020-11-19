@@ -23,20 +23,31 @@ public class AreaCirculo extends AppCompatActivity {
 
 
     public void calcularAreaCirculo (View v){
-        Double radio = Double.parseDouble(radioCirculo.getText().toString());
-        Double resultado= 3.1416*(radio*radio);
-        Operacion ope = new Operacion(getString(R.string.area_del_circulo), getString(R.string.radio)+" : " + radio ,""+resultado);
-        ope.guardar();
-        intent = new Intent(AreaCirculo.this, Resultado.class);
-        intent.putExtra("titulo", getString(R.string.circulo)) ;
-        intent.putExtra("tipoCalculo", getString(R.string.areas)) ;
-        intent.putExtra("medida", "m2") ;
-        intent.putExtra("resultado", ""+resultado.toString());
-        startActivity(intent);
+        if(validar()) {
+            Double radio = Double.parseDouble(radioCirculo.getText().toString());
+            Double resultado = 3.1416 * (radio * radio);
+            Operacion ope = new Operacion(getString(R.string.area_del_circulo), getString(R.string.radio) + " : " + radio, "" + resultado);
+            ope.guardar();
+            intent = new Intent(AreaCirculo.this, Resultado.class);
+            intent.putExtra("titulo", getString(R.string.circulo));
+            intent.putExtra("tipoCalculo", getString(R.string.areas));
+            intent.putExtra("medida", "m2");
+            intent.putExtra("resultado", "" + resultado.toString());
+            startActivity(intent);
+        }
     }
 
     public void limpiar (View v){
         radioCirculo.setText("");
         radioCirculo.requestFocus();
+    }
+
+    public boolean validar(){
+        if (radioCirculo.getText().toString().isEmpty()) {
+            radioCirculo.setError(getString(R.string.ingrese_radio));
+            radioCirculo.requestFocus();
+            return false;
+        }
+        return true;
     }
 }

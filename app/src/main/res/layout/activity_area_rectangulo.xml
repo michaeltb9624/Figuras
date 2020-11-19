@@ -22,14 +22,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtValorAlturaRectangulo"
+            android:id="@+id/txtValorBaseRectangulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/altura" />
+            android:text="@string/base" />
 
         <EditText
-            android:id="@+id/editTextValorAlturaRectangulo"
+            android:id="@+id/editTextValorBaseRectangulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -43,14 +43,14 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtValorBaseRectangulo"
+            android:id="@+id/txtValorAlturaRectangulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/base" />
+            android:text="@string/altura" />
 
         <EditText
-            android:id="@+id/editTextValorBaseRectangulo"
+            android:id="@+id/editTextValorAlturaRectangulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

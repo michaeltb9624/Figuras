@@ -22,10 +22,11 @@ public class VolumenCilindro extends AppCompatActivity {
 
 
     public void calcularVolumenCilindro(View v) {
-        Double radio = Double.parseDouble(radioCilindro.getText().toString());
+        if (validar()){
+            Double radio = Double.parseDouble(radioCilindro.getText().toString());
         Double altura = Double.parseDouble(alturaCilindro.getText().toString());
-        Double resultado = 3.1416 *radio * radio* altura;
-        Operacion ope = new Operacion(getString(R.string.volumen_de_cilindro), getString(R.string.radio) + " : " + radio + "\n"+ getString(R.string.altura)+" : " + altura, "" + resultado);
+        Double resultado = 3.1416 * radio * radio * altura;
+        Operacion ope = new Operacion(getString(R.string.volumen_de_cilindro), getString(R.string.radio) + " : " + radio + "\n" + getString(R.string.altura) + " : " + altura, "" + resultado);
         ope.guardar();
         intent = new Intent(VolumenCilindro.this, Resultado.class);
         intent.putExtra("titulo", getString(R.string.cilindro));
@@ -34,11 +35,29 @@ public class VolumenCilindro extends AppCompatActivity {
         intent.putExtra("resultado", "" + resultado.toString());
         startActivity(intent);
     }
+    }
 
     public void limpiar(View v) {
         radioCilindro.setText("");
         alturaCilindro.setText("");
         radioCilindro.requestFocus();
+    }
+
+
+
+    public boolean validar(){
+        if (radioCilindro.getText().toString().isEmpty()) {
+            radioCilindro.setError(getString(R.string.ingrese_radio));
+            radioCilindro.requestFocus();
+            return false;
+        }
+
+        if (alturaCilindro.getText().toString().isEmpty()) {
+            alturaCilindro.setError(getString(R.string.ingrese_altura));
+            alturaCilindro.requestFocus();
+            return false;
+        }
+        return true;
     }
 
 }

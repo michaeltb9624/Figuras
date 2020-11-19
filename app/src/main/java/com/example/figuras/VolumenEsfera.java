@@ -24,20 +24,31 @@ public class VolumenEsfera extends AppCompatActivity {
 
 
     public void calcularVolumenEsfera (View v){
-        Double radio = Double.parseDouble(radioEsfera.getText().toString());
-        Double resultado= ((3.1416*(radio*radio*radio)*4))/3;
-        Operacion ope = new Operacion(getString(R.string.volumen_de_esfera), getString(R.string.radio)+" : " + radio ,""+resultado);
-        ope.guardar();
-        intent = new Intent(VolumenEsfera.this, Resultado.class);
-        intent.putExtra("titulo", getString(R.string.esfera)) ;
-        intent.putExtra("tipoCalculo", getString(R.string.volumenes)) ;
-        intent.putExtra("medida", "m3") ;
-        intent.putExtra("resultado", ""+resultado.toString());
-        startActivity(intent);
+        if(validar()) {
+            Double radio = Double.parseDouble(radioEsfera.getText().toString());
+            Double resultado = ((3.1416 * (radio * radio * radio) * 4)) / 3;
+            Operacion ope = new Operacion(getString(R.string.volumen_de_esfera), getString(R.string.radio) + " : " + radio, "" + resultado);
+            ope.guardar();
+            intent = new Intent(VolumenEsfera.this, Resultado.class);
+            intent.putExtra("titulo", getString(R.string.esfera));
+            intent.putExtra("tipoCalculo", getString(R.string.volumenes));
+            intent.putExtra("medida", "m3");
+            intent.putExtra("resultado", "" + resultado.toString());
+            startActivity(intent);
+        }
     }
 
     public void limpiar (View v){
         radioEsfera.setText("");
         radioEsfera.requestFocus();
+    }
+
+    public boolean validar(){
+        if (radioEsfera.getText().toString().isEmpty()) {
+            radioEsfera.setError(getString(R.string.ingrese_radio));
+            radioEsfera.requestFocus();
+            return false;
+        }
+        return true;
     }
 }

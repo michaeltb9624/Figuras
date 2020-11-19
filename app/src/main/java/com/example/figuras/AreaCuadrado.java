@@ -25,20 +25,32 @@ public class AreaCuadrado extends AppCompatActivity {
 
 
     public void calcularAreaCuadrado (View v){
-        Double lado = Double.parseDouble(ladoCuadrado.getText().toString());
-        Double resultado= lado*lado;
-        Operacion ope = new Operacion(getString(R.string.area_del_cuadrado), getString(R.string.lado)+" : " + lado ,""+resultado);
-        ope.guardar();
-        intent = new Intent(AreaCuadrado.this, Resultado.class);
-        intent.putExtra("titulo", getString(R.string.cuadrado)) ;
-        intent.putExtra("tipoCalculo", getString(R.string.areas)) ;
-        intent.putExtra("medida", "m2") ;
-        intent.putExtra("resultado", ""+resultado.toString());
-        startActivity(intent);
+
+        if(validar()) {
+            Double lado = Double.parseDouble(ladoCuadrado.getText().toString());
+            Double resultado = lado * lado;
+            Operacion ope = new Operacion(getString(R.string.area_del_cuadrado), getString(R.string.lado) + " : " + lado, "" + resultado);
+            ope.guardar();
+            intent = new Intent(AreaCuadrado.this, Resultado.class);
+            intent.putExtra("titulo", getString(R.string.cuadrado));
+            intent.putExtra("tipoCalculo", getString(R.string.areas));
+            intent.putExtra("medida", "m2");
+            intent.putExtra("resultado", "" + resultado.toString());
+            startActivity(intent);
+        }
     }
 
     public void limpiar (View v){
         ladoCuadrado.setText("");
         ladoCuadrado.requestFocus();
+    }
+
+    public boolean validar(){
+        if (ladoCuadrado.getText().toString().isEmpty()) {
+            ladoCuadrado.setError(getString(R.string.ingrese_lado));
+            ladoCuadrado.requestFocus();
+            return false;
+        }
+        return true;
     }
 }
