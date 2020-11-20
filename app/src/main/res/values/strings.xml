@@ -11,7 +11,7 @@
     <string name="esfera">Esfera</string>
     <string name="cono">Cono</string>
     <string name="cubo">Cubo</string>
-    <string name="valor_lado">Valor del Lado</string>
+    <string name="valor_lado">Lado</string>
     <string name="calcular">Calcular</string>
     <string name="borrar">Borrar</string>
     <string name="resultado">Resultado</string>

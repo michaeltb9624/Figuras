@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Figures</string>
+    <string name="titulo_opciones">Options</string>
+    <string name="opciones_area">Areas</string>
+    <string name="opciones_volumenes">Volumes</string>
+    <string name="opciones_operaciones_realizadas">Operations Performed</string>
+    <string name="titulo_ope_realizadas">Performed</string>
+    <string name="titulo_volumenes">Volumes</string>
+    <string name="titulo_areas">Areas</string>
+    <string name="cilindro">Cylinder</string>
+    <string name="esfera">Sphere</string>
+    <string name="cono">Cone</string>
+    <string name="cubo">Cube</string>
+    <string name="valor_lado">Side</string>
+    <string name="calcular">Calculate</string>
+    <string name="borrar">Delete</string>
+    <string name="resultado">Result</string>
+    <string name="ok">OK</string>
+    <string name="numero">No.</string>
+    <string name="operacion">Operation</string>
+    <string name="datos">Data</string>
+    <string name="area_del_cuadrado">Square Area</string>
+    <string name="lado">Side</string>
+    <string name="base">Base</string>
+    <string name="altura">Heigth</string>
+    <string name="rectangulo">Rectangle</string>
+    <string name="cuadrado">Square</string>
+    <string name="triangulo">Triangle</string>
+    <string name="areas">Area</string>
+    <string name="area_del_rectangulo">Rectangle Area</string>
+    <string name="area_del_triangulo">Triangle Area</string>
+    <string name="radio">Radio</string>
+    <string name="area_del_circulo">Circle Area</string>
+    <string name="circulo">Circle</string>
+    <string name="volumen_de_esfera">Sphere Volume</string>
+    <string name="volumenes">Volume</string>
+    <string name="volumen_de_cilindro">Cylinder Volume</string>
+    <string name="volumen_de_cono">Cone Volume</string>
+    <string name="volumen_de_cubo">Cube Volume</string>
+    <string name="ingrese_radio">Enter radio</string>
+    <string name="ingrese_lado">Enter side</string>
+    <string name="ingrese_altura">Enter height</string>
+    <string name="ingrese_base">Enter base</string>
+</resources>
